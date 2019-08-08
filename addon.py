@@ -14,7 +14,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 
-while counter > 3
+while counter > 3:
 # read the current state of the pin
     current_state = GPIO.input(RELAY_PIN)
     ssaver_state = xbmc.getCondVisibility("System.ScreenSaverActive")
