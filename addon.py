@@ -16,7 +16,7 @@ GPIO.setup(RELAY_PIN, GPIO.OUT)
 current_state = GPIO.input(RELAY_PIN)
 ssaver_state = xbmc.getCondVisibility("System.ScreenSaverActive")
 
-if ssaver_state == true:
+if ssaver_state == True:
 
     # Screensaver is on so we should turn off the relay
     GPIO.output(RELAY_PIN, GPIO.LOW)
