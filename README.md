@@ -1,3 +1,10 @@
+This is a simple addon to control the relay and turn on the amplifier when needed.
+Slightly changed to meet requirements.
+
+Forked from gabrielmdc (thanks!)
+
+Below you can find information from the author.
+
 Relay kodi addon
 ===================
 __This repository is obsolete in favor of this [script.service.relay](https://github.com/nearlg/script.service.relay)__
