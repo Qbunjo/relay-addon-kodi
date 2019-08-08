@@ -1,16 +1,31 @@
-import xbmcaddon
-#import xbmcgui
-import os
+import xbmcgui
 import xbmc
+import sys
+sys.path.append('/storage/.kodi/addons/virtual.rpi-tools/lib')
 
-addon       = xbmcaddon.Addon()
-addonname   = addon.getAddonInfo('name')
+import RPi.GPIO as GPIO
 
-line1 = "Turned on/off a relay"
-line2 = "Version: " + addon.getAddonInfo('version')
+# Set pin number once
+RELAY_PIN = 18
 
-os.system("sh /storage/.kodi/addons/relay-addon-kodi-master/relay.sh")
+GPIO.setmode(GPIO.BCM)
 
-xbmc.executebuiltin('Notification(Relay Addon, The relay was turned on/off,5000,//storage/.kodi/addons/script.relay.master/icon.png)')
-#xbmcgui.Dialog().ok(addonname, line1, line2)
+GPIO.setup(RELAY_PIN, GPIO.OUT)
 
+# read the current state of the pin
+current_state = GPIO.input(RELAY_PIN)
+
+if current_state == GPIO.HIGH:
+
+    # Pin is on so we should turn off
+    GPIO.output(RELAY_PIN, GPIO.LOW)
+    state = "off"
+
+else:
+
+    # Pin is off so we should turn on
+    GPIO.output(RELAY_PIN, GPIO.HIGH)
+    state = "on"
+
+# Send notification
+xbmcgui.Dialog().notification("Relay", "Relay is now {0}!".format(state))
