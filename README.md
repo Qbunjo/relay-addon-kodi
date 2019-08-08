@@ -1,5 +1,5 @@
 This is a simple addon to control the relay and turn on the amplifier when needed.
-Slightly changed to meet requirements.
+Slightly changed to meet my requirements.
 
 Forked from gabrielmdc (thanks!)
 
