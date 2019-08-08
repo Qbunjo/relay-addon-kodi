@@ -27,4 +27,4 @@ while counter < 3:
         GPIO.output(RELAY_PIN, GPIO.HIGH)
         state = "on"
         # Send notification
-        xbmcgui.Dialog().notification("Relay", "Amplifier is now {0}!".format(state))
+        # xbmcgui.Dialog().notification("Relay", "Amplifier is now {0}!".format(state))
