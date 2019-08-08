@@ -14,18 +14,19 @@ GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 # read the current state of the pin
 current_state = GPIO.input(RELAY_PIN)
+ssaver_state = xbmc.getCondVisibility("System.ScreenSaverActive")
 
-if current_state == GPIO.HIGH:
+if ssaver_state == true:
 
-    # Pin is on so we should turn off
+    # Screensaver is on so we should turn off
     GPIO.output(RELAY_PIN, GPIO.LOW)
     state = "off"
 
 else:
 
-    # Pin is off so we should turn on
+    # Screensaver is off so we should turn on
     GPIO.output(RELAY_PIN, GPIO.HIGH)
     state = "on"
 
 # Send notification
-xbmcgui.Dialog().notification("Relay", "Relay is now {0}!".format(state))
+xbmcgui.Dialog().notification("Relay", "Amplifier is now {0}!".format(state))
