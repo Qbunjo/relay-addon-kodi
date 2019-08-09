@@ -1,8 +1,7 @@
-This is a simple addon to control the relay and turn on the amplifier when needed.
-Slightly changed to meet my requirements.
+This is a simple addon to control the relay and turn on the amplifier when needed. Now the amplifier turns on when the screensaver goes off. 
 
 Forked from gabrielmdc (thanks!)
-
+The script was slightly changed to meet my requirements.
 Below you can find information from the author.
 
 Relay kodi addon
