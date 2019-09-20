@@ -1,4 +1,4 @@
-This is a simple addon to control the relay and turn on the amplifier when needed. Now the amplifier turns on when the screensaver goes off. 
+This is a simple RPi Libreelec addon to control the relay and turn on the amplifier when needed. Now the amplifier turns on when the screensaver goes off. 
 To get this script working you have to install rpi-tools plugin from libreelec repo. Also, it is necessary to add this script to the autoexec.py to allow automatic startup.
 
 Forked from gabrielmdc (thanks!)
