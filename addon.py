@@ -14,7 +14,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 
-while (true):
+while True:
 # read the current state of the pin
     time.sleep(30)
     current_state = GPIO.input(RELAY_PIN)
