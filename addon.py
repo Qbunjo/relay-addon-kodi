@@ -1,21 +1,22 @@
 import xbmcgui
 import xbmc
 import sys
+import time
 sys.path.append('/storage/.kodi/addons/virtual.rpi-tools/lib')
 
 import RPi.GPIO as GPIO
 
 # Set pin number once
 RELAY_PIN = 18
-counter = 0
 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 
-while counter < 3:
+while (true):
 # read the current state of the pin
+    time.sleep(30)
     current_state = GPIO.input(RELAY_PIN)
     ssaver_state = xbmc.getCondVisibility("System.ScreenSaverActive")
     if ssaver_state == True:
