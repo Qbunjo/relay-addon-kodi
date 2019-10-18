@@ -16,7 +16,7 @@ GPIO.setup(RELAY_PIN, GPIO.OUT)
 
 while True:
 # sleep for some time to reduce CPU usage
-    time.sleep(30)
+    time.sleep(1)
 # read the current state of the pin
     current_state = GPIO.input(RELAY_PIN)
     ssaver_state = xbmc.getCondVisibility("System.ScreenSaverActive")
